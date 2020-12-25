@@ -1,9 +1,13 @@
+library identifier: 'jenkins-shared-lib-demo1@master',
+        retriever: modernSCM([$class: 'GitSCMSource',
+         remote: 'https://github.com/hhammidd/jenkins-shared-lib-demo1.git'])
+
 pipeline {
   agent any
   stages {
     stage('stage1') {
       steps {
-        doSh()
+        doEcho()
         echo 'Hello $BUILD_NUMBER the DEMO is $DEMO'
       }
     }
@@ -13,7 +17,3 @@ pipeline {
     DEMO = '1'
   }
 }
-
- void doSh() {
-    sh 'echo "Hello babe $BUILD_NUMBER the DEMO is $DEMO"'
-  }
