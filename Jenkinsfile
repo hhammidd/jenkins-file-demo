@@ -12,8 +12,8 @@ pipeline {
   environment {
     DEMO = '1'
   }
+}
 
-  void doSh() {
+ void doSh() {
     sh 'echo "Hello babe $BUILD_NUMBER the DEMO is $DEMO"'
   }
-}
