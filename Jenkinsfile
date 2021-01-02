@@ -11,6 +11,11 @@ pipeline {
         echo 'Hello $BUILD_NUMBER the DEMO is $DEMO'
       }
     }
+    stage('goodbye') {
+          steps {
+            goodBye(' Hamid')
+          }
+        }
 
   }
   environment {
