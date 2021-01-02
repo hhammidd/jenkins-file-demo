@@ -13,7 +13,7 @@ pipeline {
     }
     stage('goodbye') {
           steps {
-            goodBye(' Hamid')
+            helloArgs.goodBye(' Hamid')
           }
         }
 
