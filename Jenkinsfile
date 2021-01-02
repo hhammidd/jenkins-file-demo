@@ -13,7 +13,9 @@ pipeline {
     }
     stage('goodbye') {
           steps {
+          script {
             helloArgs.goodBye(' Hamid')
+          }
           }
         }
 
